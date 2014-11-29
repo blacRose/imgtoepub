@@ -10,8 +10,5 @@ args = parser.parse_args()
 
 if args.uhno==True:
     #if it's not images
-    print "true"
-    shutil.copy(args.thedir, "../moo")
 else:
     #if it is images
-    print "false"
