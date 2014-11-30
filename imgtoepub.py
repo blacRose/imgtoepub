@@ -3,6 +3,7 @@ import shutil
 import tempfile
 import os
 import zipfile
+import errno
 from time import gmtime, strftime
 
 # From Randy
@@ -20,6 +21,14 @@ parser = argparse.ArgumentParser(description='Program to convert folder of image
 parser.add_argument('thedir', help='The directory of files to take and turn into an epub')
 parser.add_argument('--output', '-o', help='Filename to create') #output name, including epub or not
 parser.add_argument('--not', '-n', dest='uhno', action='store_true', help='If included, the directory is not images')
+# cp -r for python
+def copyanything(src, dst):
+    try:
+        shutil.copytree(src, dst)
+    except OSError as exc: # python >2.5
+        if exc.errno == errno.ENOTDIR:
+            shutil.copy(src, dst)
+        else: raise
 
 args = parser.parse_args()
 
@@ -37,8 +46,7 @@ else:
     dirtoputin = tempfile.gettempdir()
     dirtoputin += "/img2epub" + strftime("%Y-%m-%d[%H:%M:%S]", gmtime())
     print("Temporary files are in "+dirtoputin)
-    os.mkdir(dirtoputin)
+    copyanything(args.thedir, dirtoputin)
     
-    
-    os.removedirs(dirtoputin)
+    shutil.rmtree(dirtoputin)
     
