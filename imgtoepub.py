@@ -7,14 +7,16 @@ parser.add_argument('--output', '-o', help='Filename to create') #output name, i
 parser.add_argument('--not', '-n', dest='uhno', action='store_true', help='If included, the directory is not images')
 
 args = parser.parse_args()
-if args.output.endswith(".epub"):
-    outfile = args.output[:-5]
-else:
-    outfile = args.output
+
+if args.output != None:
+    if args.output.endswith(".epub"):
+        outfile = args.output[:-5]
+    else:
+        outfile = args.output
 
 if args.uhno==True:
     #if it's not images
-    print outfile
+    print(outfile)
 else:
     #if it is images
-    print "tree"
+    print("tree")
