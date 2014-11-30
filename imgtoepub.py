@@ -12,8 +12,11 @@ if args.output.endswith(".epub"):
     outfile = args.output[:-5]
 else:
     outfile = args.output
+
+
 if args.uhno==True:
     #if it's not images
+    print outfile
 else:
     #if it is images
     print "tree"

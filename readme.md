@@ -4,6 +4,9 @@
 
 # Looking for contributors...
 
+###Useful small stuff
+
+[https://docs.python.org/2/howto/argparse.html](argparse tutorial) and [https://docs.python.org/2/library/argparse.html](argparse docs)
 # Todo:
 - specify dir and file name to create
 - grab files in dir and put in tmp folder
