@@ -2,6 +2,8 @@
 
 ##This is going to be a program to take a folder of images and make it an epub.
 
+Run like `python3 imgtoepub.py -o filez -n .`
+
 # Looking for contributors...
 
 The big thing is, I really need info about what you implement, or [issues](https://github.com/blacRose/imgtoepub/issues) are preferred...
