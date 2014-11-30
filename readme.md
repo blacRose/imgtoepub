@@ -12,7 +12,7 @@ The big thing is, I really need info about what you implement, or [issues](https
 
 [argparse tutorial](https://docs.python.org/2/howto/argparse.html) and [argparse docs](https://docs.python.org/2/library/argparse.html)
 # Todo:
-- specify dir and file name to create
+- **DONE** specify dir and file name to create
 - grab files in dir and put in tmp folder
 - create HTML
 - make file metadata
