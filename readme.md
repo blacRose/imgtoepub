@@ -14,3 +14,4 @@
 - make file metadata
 - zip dir contents
 - create .epub from zip
+# Yeah, git is hard... but <3!
