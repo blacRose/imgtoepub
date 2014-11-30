@@ -2,6 +2,19 @@ import argparse
 import shutil
 import tempfile
 import os
+import zipfile
+from time import gmtime, strftime
+
+# From Randy
+# f = NamedTemporaryFile(delete=False)
+# f.close()
+# fn = f.name + '.gz'
+# os.rename(f.name, fn)
+# fz = gzip.open(fn, 'wb')
+# writer = csv.writer(fz, delimiter='\t', lineterminator=lt)
+# for row in table:
+#     writer.writerow(row)
+# fz.close()
 
 parser = argparse.ArgumentParser(description='Program to convert folder of images to epub.')
 parser.add_argument('thedir', help='The directory of files to take and turn into an epub')
@@ -22,8 +35,10 @@ if args.uhno==True:
 else:
     #if it is images
     dirtoputin = tempfile.gettempdir()
-    dirtoputin += "/img2epub"
+    dirtoputin += "/img2epub" + strftime("%Y-%m-%d[%H:%M:%S]", gmtime())
     print("Temporary files are in "+dirtoputin)
     os.mkdir(dirtoputin)
     
+    
+    os.removedirs(dirtoputin)
     
