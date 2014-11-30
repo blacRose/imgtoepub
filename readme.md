@@ -4,6 +4,8 @@
 
 # Looking for contributors...
 
+The big thing is, I really need info about what you implement, or [issues](https://github.com/blacRose/imgtoepub/issues) are preferred...
+
 ###Useful small stuff
 
 [argparse tutorial](https://docs.python.org/2/howto/argparse.html) and [argparse docs](https://docs.python.org/2/library/argparse.html)
