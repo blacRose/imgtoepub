@@ -10,7 +10,8 @@ The big thing is, I really need info about what you implement, or [issues](https
 
 ###Useful small stuff
 
-[argparse tutorial](https://docs.python.org/2/howto/argparse.html) and [argparse docs](https://docs.python.org/2/library/argparse.html)
+- [argparse tutorial](https://docs.python.org/3/howto/argparse.html) and [argparse docs](https://docs.python.org/3/library/argparse.html)
+- [shutil docs](https://docs.python.org/3/library/shutil.html)
 # Todo:
 - **DONE** specify dir and file name to create
 - grab files in dir and put in tmp folder
